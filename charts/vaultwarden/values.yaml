@@ -1,16 +1,21 @@
 image:
-  registry: docker.io
+  registry: docker.io # fix
   repository: vaultwarden/server
   tag: ""
   pullPolicy: IfNotPresent
-  pullSecrets: []
+  pullSecrets: [] # fix
 
+nameOverride: ""
 fullnameOverride: ""
 
 podAnnotations: {}
 
 podLabels: {}
 
+service:
+  type: ClusterIP
+  port: 80
+  
 ingress:
   enabled: false
   className: ""
